@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پرسش‌نامه فعالیت بدنی — تهران</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Vazirmatn:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body dir="rtl">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1 class="site-title" id="site-title"></h1>
+        <nav class="lang-switcher" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="fa">فارسی</button>
+          <button type="button" class="lang-btn" data-lang="ru">RU</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </nav>
+        <p class="instruction" id="instruction"></p>
+      </div>
+    </header>
+
+    <main class="page">
+      <form id="questionnaire-form" novalidate>
+        <div id="sections-root"></div>
+        <div class="form-footer">
+          <button type="submit" class="submit-btn" id="submit-btn"></button>
+          <div
+            id="form-toast"
+            class="toast"
+            role="status"
+            aria-live="polite"
+          ></div>
+        </div>
+      </form>
+    </main>
+
+    <script src="js/questionnaire-data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
