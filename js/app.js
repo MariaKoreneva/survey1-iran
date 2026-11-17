@@ -395,5 +395,11 @@
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   });
 
-  applyLang("fa");
+  function getInitialLangFromUrl() {
+    const param = new URLSearchParams(window.location.search).get("lang");
+    if (param === "ru" || param === "en" || param === "fa") return param;
+    return "fa";
+  }
+
+  applyLang(getInitialLangFromUrl());
 })();
